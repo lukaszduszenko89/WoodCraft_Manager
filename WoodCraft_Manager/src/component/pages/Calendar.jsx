@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import MainApp from '../aplication/MainApp';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarDays } from '@fortawesome/free-solid-svg-icons'
+import { faClock } from '@fortawesome/free-solid-svg-icons'
+
 
 export default function Calendar() {
     const [calendarData, setCalendarData] = useState(() => {
@@ -55,8 +59,8 @@ export default function Calendar() {
                     <tbody>
                         {calendarData.map((item, index) => (
                             <tr key={index}>
-                                <td>{item.date}</td>
-                                <td>{item.time}</td>
+                                <td><FontAwesomeIcon icon={faCalendarDays} /> {item.date}</td>
+                                <td><FontAwesomeIcon icon={faClock} /> {item.time}</td>
                                 <td>{item.description}</td>
                                 <td>
                                     <button className='delete-btn-calendar'
