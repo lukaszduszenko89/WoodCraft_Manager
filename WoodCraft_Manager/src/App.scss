@@ -1,0 +1,698 @@
+body {
+    min-height: 100vh;
+    // overflow-x: hidden;
+    background-image: url(./assets/app_bg.png);
+}
+
+
+
+
+.navigation {
+    position: absolute;
+    width: 100%;
+}
+
+.nav_content.active {
+    width: 100px;
+}
+
+.burger {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    color: violet;
+    cursor: pointer;
+}
+
+
+
+
+.nav_content {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: #40216b;
+    border-left: 10px solid #40216b;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+
+
+h2 {
+    color: #f9553a;
+    font-size: 1.25rem;
+    margin-bottom: 50px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 25px;
+
+}
+
+
+.nav_content ul {
+    position: absolute;
+
+    left: 0;
+    width: 100%;
+}
+
+.nav_content ul li {
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 30px;
+}
+
+.nav_content ul li:hover,
+.nav_content ul li.hovered {
+    background-color: #fff;
+}
+
+.nav_content ul li:nth-child(1) {
+    margin-bottom: 50px;
+}
+
+
+
+.nav_content ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav_content ul li:hover a,
+.nav_content ul li.hovered a {
+    color: #40216b;
+}
+
+.nav_content ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.nav_content ul li:hover a::before,
+.nav_content ul li.hovered a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px #fff;
+    pointer-events: none;
+}
+
+.nav_content ul li:hover a::after,
+.nav_content ul li.hovered a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px #fff;
+    pointer-events: none;
+}
+
+
+.main_dashboard {
+    position: absolute;
+    width: calc(100% - 400px);
+    left: 350px;
+    min-height: 95vh;
+    margin-top: 20px;
+}
+
+.tableWrapper {
+
+    background-size: cover;
+    width: calc(100% - 300px);
+    margin-top: 40px;
+    position: absolute;
+    left: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    // background-color: #fff;
+
+    h2 {
+        color: #333;
+        font-size: 2.25em;
+
+        margin-bottom: -150px;
+        border-bottom: 2px solid #f9553a;
+    }
+}
+
+.addUserTable {
+    border-collapse: collapse;
+    border-radius: 10px;
+    white-space: nowrap;
+    height: 50px;
+    width: 80%;
+    margin-top: 200px;
+    left: 200px;
+    overflow-x: auto;
+}
+
+thead {
+    background-color: #40216b;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+
+}
+
+th,
+td {
+    padding: 0.9rem;
+
+}
+
+td {
+    border-top: 0.5px solid #4b0d548e;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+tbody tr {
+    background-color: #00000021;
+    color: #333
+}
+
+tbody tr:hover {
+    background-color: #39175267;
+    color: white;
+}
+
+
+
+tbody td {
+    position: relative;
+
+}
+
+.label {
+    border-radius: 3px;
+    padding: 0.3rem;
+    color: #40216b;
+}
+
+.label-started {
+    background-color: #28a745;
+}
+
+.label-finished {
+    background-color: #6c757d;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.actions svg {
+    cursor: pointer;
+}
+
+.delete-btn {
+    color: #f9553a;
+}
+
+.edit-btn {
+    color: #333;
+}
+
+.modal-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-add-new-client {
+    margin-bottom: 100px;
+    background-color: #f9553a;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.modal {
+    border-radius: 8px;
+    padding: 0 2rem;
+    box-shadow: 0px 10px 10px #3f074963;
+    background: linear-gradient(30deg, rgb(25, 16, 40) 27%, rgba(73, 41, 120, 1) 88%);
+    width: 600px;
+    left: 35%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    margin-bottom: 50px;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.modal button {
+    margin-top: 1rem;
+    background-color: #f9553a;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    color: #fff;
+    font-weight: bold;
+}
+
+.modalInput {
+    width: 50%;
+}
+
+
+.form-group input,
+.form-group select {
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    font-size: 0.9rem;
+    width: 300px;
+}
+
+
+.add-task {
+    background-image: url(./assets/app_bg.png);
+    background-position: center;
+    background-size: cover;
+
+    width: calc(100% - 350px);
+
+    left: 350px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    h2 {
+        width: 500px;
+        height: 50px;
+        border-bottom: 1px solid #f9553a;
+        font-size: 2.3rem;
+        margin-top: 60px;
+    }
+
+
+}
+
+.task-form {
+    background-color: #40216b;
+    width: 80%;
+    height: 360px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.taskFormSelect {
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: -10px;
+}
+
+.iconTaskCard {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+    border-top: 1px solid gray;
+    margin-top: 10px;
+    align-items: center;
+    font-size: large;
+}
+
+
+
+.tasks {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 200px;
+
+    h3 {
+
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+
+
+    }
+}
+
+.faUserTaskCard {
+    margin-bottom: 20px;
+}
+
+.firstTaskLabel {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 10px;
+
+    input {
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+    }
+}
+
+.textArea {
+    margin-top: 30px;
+    width: 800px;
+
+    textarea {
+        width: 90%;
+        height: 100px;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+    }
+}
+
+.taskFormSelect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.taskFormButton {
+    width: 200px;
+    height: 40px;
+    background-color: #f9553a;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.unicalID {
+    color: rgb(255, 255, 255);
+}
+
+.faPenTaskCard {
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.faTrashTaskCard {
+    color: rgb(201, 29, 29);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.task-card {
+    max-width: 250px;
+}
+
+
+.calendar-comp {
+    width: 100%;
+    left: 300px;
+}
+
+.data-input-calendar {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+
+}
+
+.time-input-calendar {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.description-input-calendar {
+    padding: 5px;
+    width: 400px;
+    border-radius: 5px;
+    border: none;
+
+}
+
+.calendar-table {
+    width: 100%;
+}
+
+.calendar-header {
+    font-size: 35px;
+    color: #333;
+    margin-bottom: 100px;
+    border-bottom: 1px solid #f9553a;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.date-div-calendar {
+    font-size: 20px;
+}
+
+.delete-btn-calendar {
+    width: 70px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #6c757d;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+}
+
+.calendarWrapper {
+    background-color: #28a745;
+    width: 100%;
+    position: absolute;
+}
+
+
+.nie-oplacone {
+    border: 1px solid red
+}
+
+.save-meeting-btn {
+    width: 180px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #f9553a;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.budget-component {
+    width: calc(100% - 300px);
+    left: 300px;
+    padding: 20px;
+}
+
+.table-wrapper {
+    width: 100%;
+}
+
+.tBodyBudget {
+    input {
+        max-width: 9.5vw;
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+    }
+}
+
+
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.topbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.search {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+    top: 0;
+}
+
+.search label {
+    position: relative;
+    width: 100%;
+}
+
+.search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    outline: none;
+    padding: 5px 20px;
+    left: 10px;
+    border: 1px solid #333;
+    padding-left: 35px;
+
+}
+
+.searchIcon {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    font-size: 0.9rem;
+}
+
+
+.user {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #40216b;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.2rem;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.static {
+    width: calc(100% - 500px);
+    left: 500px;
+    height: 400px;
+    position: absolute;
+}
+
+.canvasBar {
+    width: 100vw;
+    height: 100vh;
+}
+
+.chart-container {
+    width: 100%;
+    margin-bottom: 100px;
+
+}
+
+.chart-canvas {
+    width: 100vw;
+    height: 600px;
+}
+
+.input-fields {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 50px;
+
+    input {
+        border-radius: 10px;
+        border: 1px solid #333;
+        padding: 0 10px;
+    }
+
+}
