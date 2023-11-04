@@ -1,8 +1,35 @@
-# React + Vite
+# WoodCraft Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+This application serves as a dashboard for managing various aspects related to clients, tasks, budgets, and more. It provides visualization through charts and allows for data input to track different metrics.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Dashboard:** Provides an overview of different metrics using charts and data.
+- **Add Client:** Allows adding new clients with specific details.
+- **Task Management:** Facilitates adding, editing, and deleting tasks.
+- **Calendar:** Scheduling and planning meetings or events.
+- **Budget Tracking:** Tracks financial aspects, including payments and planned amounts.
+
+## Installation
+1. Clone the repository.
+2. Install the necessary dependencies: `npm install`.
+
+Technologies Used
+
+React.js
+Chart.js
+HTML/CSS
+JavaScript
+Other dependencies mentioned in the package.json file.
+
+
+Contributing
+Contributions are welcome. Feel free to fork the repository, make changes, and create a pull request. Any feedback or suggestions are appreciated.
